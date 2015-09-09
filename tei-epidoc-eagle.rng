@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2015-07-16T11:38:21Z. .
+Schema generated from ODD source 2015-09-09T20:33:29Z. .
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -4799,7 +4799,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       context="/tei:TEI/tei:facsimile/tei:graphic">
                <sch:assert test="normalize-space(@n)">@n is required for identifying this resource within the CP repository</sch:assert>
                <sch:assert test="normalize-space(@url)">@url is required pointing to the resource file</sch:assert>
-               <sch:assert test="tei:desc/tei:ref[@type=&#34;license&#34; and (@target=&#34;http://creativecommons.org/publicdomain/mark/1.0/&#34;                                     or @target=&#34;http://www.europeana.eu/portal/rights/out-of-copyright-non-commercial.html&#34;                                     or @target=&#34;http://creativecommons.org/publicdomain/zero/1.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nd/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc-nd/4.0/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/rr-f/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/rr-p/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/orphan-work-eu/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/unknown/&#34;)]">desc/ref is required within graphic with both @type="license" and @target pointing to one of the rights statements of Europeana. See http://pro.europeana.eu/page/available-rights-statements</sch:assert>
+               <sch:assert test="tei:desc/tei:ref[@type=&#34;license&#34; and (@target=&#34;http://creativecommons.org/publicdomain/mark/1.0/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/out-of-copyright-non-commercial/&#34;                                     or @target=&#34;http://creativecommons.org/publicdomain/zero/1.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nd/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;                                     or @target=&#34;http://creativecommons.org/licenses/by-nc-nd/4.0/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/rr-f/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/rr-p/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/orphan-work-eu/&#34;                                     or @target=&#34;http://www.europeana.eu/rights/unknown/&#34;)]">desc/ref is required within graphic with both @type="license" and @target pointing to one of the rights statements of Europeana. See http://pro.europeana.eu/page/available-rights-statements</sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -5905,8 +5905,32 @@ Licensing, etc.]</a:documentation>
             <attribute name="target">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
+                  <value>http://creativecommons.org/publicdomain/mark/1.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The Public Domain Mark (PDM)</a:documentation>
+                  <value>http://www.europeana.eu/rights/out-of-copyright-non-commercial/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Out of copyright - non commercial re-use (OOC-NC)</a:documentation>
                   <value>http://creativecommons.org/publicdomain/zero/1.0/</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fixed to Creative Commons CC0 1.0 Universal Public Domain Dedication licence</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution (BY)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-sa/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution, ShareAlike (BY-SA)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nd/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution, No Derivatives (BY-ND)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution, Non-Commercial (BY-NC)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc-sa/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution, Non-Commercial, ShareAlike (BY-NC-SA)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc-nd/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Creative Commons - Attribution, Non-Commercial, No Derivatives (BY-NC-ND)</a:documentation>
+                  <value>http://www.europeana.eu/rights/rr-f/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rights Reserved - Free Access</a:documentation>
+                  <value>http://www.europeana.eu/rights/rr-p/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rights Reserved - Paid Access</a:documentation>
+                  <value>http://www.europeana.eu/rights/orphan-work-eu/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Orphan work</a:documentation>
+                  <value>http://www.europeana.eu/rights/unknown/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Unknown</a:documentation>
                </choice>
             </attribute>
          </optional>

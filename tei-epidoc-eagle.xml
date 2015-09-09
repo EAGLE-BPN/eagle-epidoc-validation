@@ -570,8 +570,8 @@ End license statement: do not remove -->
                     </constraintSpec>
                 </elementSpec>
                 
-                <!--Metadata rights (not mandatory, cardinality: 1)-->
-                <!--constraining rights of metadata to a fixed value pointing to http://creativecommons.org/publicdomain/zero/1.0/-->
+                <!--Data licence (not mandatory, cardinality: 1)-->
+                <!--constraining rights of data to a one of Europeana's recommended values-->
                 <elementSpec ident="licence" module="header" mode="change">
 <!--                    <constraintSpec scheme="isoschematron" ident="eagleLicence">
                         <constraint>
@@ -584,8 +584,44 @@ End license statement: do not remove -->
                         <!-- constraining values of licence/@target -->
                         <attDef ident="target" mode="replace">
                             <valList type="closed">
+                                <valItem ident="http://creativecommons.org/publicdomain/mark/1.0/">
+                                    <desc>The Public Domain Mark (PDM)</desc>
+                                </valItem>
+                                <valItem ident="http://www.europeana.eu/rights/out-of-copyright-non-commercial/">
+                                    <desc>Out of copyright - non commercial re-use (OOC-NC)</desc>
+                                </valItem>
                                 <valItem ident="http://creativecommons.org/publicdomain/zero/1.0/">
-                                    <desc>Fixed to Creative Commons CC0 1.0 Universal Public Domain Dedication licence</desc>
+                                    <desc>The Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by/4.0/">
+                                    <desc>Creative Commons - Attribution (BY)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by-sa/4.0/">
+                                    <desc>Creative Commons - Attribution, ShareAlike (BY-SA)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by-nd/4.0/">
+                                    <desc>Creative Commons - Attribution, No Derivatives (BY-ND)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by-nc/4.0/">
+                                    <desc>Creative Commons - Attribution, Non-Commercial (BY-NC)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                                    <desc>Creative Commons - Attribution, Non-Commercial, ShareAlike (BY-NC-SA)</desc>
+                                </valItem>
+                                <valItem ident="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                                    <desc>Creative Commons - Attribution, Non-Commercial, No Derivatives (BY-NC-ND)</desc>
+                                </valItem>
+                                <valItem ident="http://www.europeana.eu/rights/rr-f/">
+                                    <desc>Rights Reserved - Free Access</desc>
+                                </valItem>
+                                <valItem ident="http://www.europeana.eu/rights/rr-p/">
+                                    <desc>Rights Reserved - Paid Access</desc>
+                                </valItem>
+                                <valItem ident="http://www.europeana.eu/rights/orphan-work-eu/">
+                                    <desc>Orphan work</desc>
+                                </valItem>
+                                <valItem ident="http://www.europeana.eu/rights/unknown/">
+                                    <desc>Unknown</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -831,7 +867,7 @@ End license statement: do not remove -->
                                 <!--Visual representation rights (mandatory, cardinality: 1)-->
                                 <!--checking resource licence being one of Europeanas available rights statements-->
                                 <sch:assert test='tei:desc/tei:ref[@type="license" and (@target="http://creativecommons.org/publicdomain/mark/1.0/"
-                                    or @target="http://www.europeana.eu/portal/rights/out-of-copyright-non-commercial.html"
+                                    or @target="http://www.europeana.eu/rights/out-of-copyright-non-commercial/"
                                     or @target="http://creativecommons.org/publicdomain/zero/1.0/"
                                     or @target="http://creativecommons.org/licenses/by/4.0/"
                                     or @target="http://creativecommons.org/licenses/by-sa/4.0/"
