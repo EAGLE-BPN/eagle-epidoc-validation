@@ -5,7 +5,7 @@ This is a customization of the <a href="http://svn.code.sf.net/p/epidoc/code/tru
 
 <ul>
   <li>provider of metadata is not empty</li>
-  <li>rights of metadata to a fixed value pointing to http://creativecommons.org/publicdomain/zero/1.0/</li>
+  <li>data licence to one of <a href="http://pro.europeana.eu/page/available-rights-statements" target="_new">Europeana's available rights statements</a></li>
   <li>content provider id for the resource is not empty</li>
   <li>content provider URI for the resource is not empty</li>
   <li>trismegistos number, if provided, is not empty</li>
